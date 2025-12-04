@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitLife Fitness Club</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+header {
+  background:black;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: green;
+}
+
+.hero {
+  background: url("https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=1500&q=80")
+    center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+}
+
+.btn {
+  background: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background: green;
+}
+
+.section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 2em;
+  color:black;
+}
+
+.class-container,
+.trainer-container,
+.plan-container,
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.class-card,
+.trainer-card,
+.plan-card,
+.blog-post {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px black;
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.class-card:hover,
+.trainer-card:hover,
+.plan-card:hover,
+.blog-post:hover {
+  transform: translateY(-5px);
+}
+
+.trainer-card img,
+.blog-post img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.plan-card ul {
+  list-style: none;
+  margin: 15px 0;
+}
+
+.plan-card li {
+  margin: 8px 0;
+}
+
+.plan-card.featured {
+  border: 2px solid green;
+}
+
+footer {
+  background: green;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+</style>
+<body>
+  <header>
+    <div class="logo">💪 FitLife Fitness Club</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Transform Your Body, Transform Your Life</h1>
+      <p>Join the best fitness club in town and start your fitness journey today.</p>
+      <a href="#membership" class="btn">Join Now</a>
+    </div>
+  </section>
+
+  <section id="classes" class="section">
+    <h2>Our Class Schedule</h2>
+    <div class="class-container">
+      <div class="class-card">
+        <h3>Yoga</h3>
+        <p>Mon, Wed, Fri - 7:00 AM</p>
+      </div>
+      <div class="class-card">
+        <h3>HIIT</h3>
+        <p>Tue, Thu - 6:00 PM</p>
+      </div>
+      <div class="class-card">
+        <h3>Strength Training</h3>
+        <p>Mon, Wed, Fri - 5:00 PM</p>
+      </div>
+      <div class="class-card">
+        <h3>Zumba</h3>
+        <p>Sat, Sun - 9:00 AM</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="trainers" class="section">
+    <h2>Meet Our Trainer</h2>
+    <div class="trainer-container">
+      <div class="trainer-card">
+        <img src="https://t4.ftcdn.net/jpg/06/37/47/93/360_F_637479333_qpP3LSOIoWKGklqpeH3ijYUNZsyv2XBi.jpg" alt="Trainer " />
+        <h3>Alex Johnson</h3>
+        <p>Certified Personal Trainer & Nutrition Expert</p>
+      </div>
+  </section>
+
+  <section id="membership" class="section">
+    <h2>Membership Plans</h2>
+    <div class="plan-container">
+      <div class="plan-card">
+        <h3>Basic</h3>
+        <p>$20 / month</p>
+        <ul>
+          <li>Access to gym equipment</li>
+          <li>1 fitness class per week</li>
+        </ul>
+        <a href="#" class="btn">Sign Up</a>
+      </div>
+      <div class="plan-card featured">
+        <h3>Premium</h3>
+        <p>$40 / month</p>
+        <ul>
+          <li>Unlimited class access</li>
+          <li>Personal trainer sessions</li>
+          <li>Free fitness assessment</li>
+        </ul>
+        <a href="#" class="btn">Sign Up</a>
+      </div>
+      <div class="plan-card">
+        <h3>Elite</h3>
+        <p>$60 / month</p>
+        <ul>
+          <li>All Premium benefits</li>
+          <li>Nutrition coaching</li>
+          <li>Priority booking</li>
+        </ul>
+        <a href="#" class="btn">Sign Up</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="section">
+    <h2>Fitness Tips & Blog</h2>
+    <div class="blog-container">
+      <div class="blog-post">
+        <h3>Top 10 Exercises for a Strong Core</h3>
+        <p>Discover simple yet effective core exercises to improve your strength and posture.</p>
+      </div>
+      <div class="blog-post">
+       
+        <h3>Healthy Eating for Better Results</h3>
+        <p>Learn how to balance your meals to fuel your workouts and recovery.</p>
+      </div>
+      <div class="blog-post">
+       
+        <h3>How to Stay Motivated in Fitness</h3>
+        <p>Tips and tricks to keep your motivation high throughout your fitness journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 FitLife Fitness Club | Designed with ❤️ by Shubham </p>
+  </footer>
+</body>
+</html>
